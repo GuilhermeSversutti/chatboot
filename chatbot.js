@@ -253,9 +253,9 @@ async function iniciarConversa(msg, name) {
   await delay(1000);
   await client.sendMessage(
     msg.from,
-    `👋 *Olá, ${name.split(" ")[0]}!* 🌟\n\n` +
-      `Sou o *assistente virtual* da *FGDIGITAL*! 🚀\n\n` +
-      `Estou aqui para ajudar você a criar uma landing page profissional que vai transformar sua presença digital! 💫\n\n` +
+    ` *Olá, ${name.split(" ")[0]}!* \n\n` +
+      `Sou o *assistente virtual* da *FGDIGITAL*! \n\n` +
+      `Estou aqui para ajudar você a criar uma landing page profissional que vai transformar sua presença digital! \n\n` +
       `Como posso ajudar? Escolha uma opção:\n\n` +
       `1️⃣ - *Criar minha Landing Page* \n` +
       `2️⃣ - *Conhecer nossos Planos* \n` +
