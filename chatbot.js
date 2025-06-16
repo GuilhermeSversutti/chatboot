@@ -19,7 +19,7 @@ const client = new Client({
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
-      "--headless=new",
+      "--headless",
       "--disable-gpu",
       "--disable-dev-shm-usage",
       "--disable-software-rasterizer",
@@ -31,7 +31,7 @@ const client = new Client({
 });
 
 client.on("qr", (qr) => {
-  // Salva o QR code em um arquivo
+  qrcode.generate(qr, { small: true }); // Mostra o QR code no terminal
   const qrPath = path.join(__dirname, "whatsapp-qr.txt");
   fs.writeFileSync(qrPath, qr);
   console.log("QR Code salvo em:", qrPath);
