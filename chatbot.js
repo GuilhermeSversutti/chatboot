@@ -206,7 +206,7 @@ async function iniciarColetaLandingPage(msg, userId) {
     " *Criar minha Landing Page* \n\n" +
       "Perfeito! Para começarmos a criar sua landing page profissional, precisamos coletar algumas informações importantes.\n\n" +
       "📝 *Acesse nosso formulário personalizado:*\n" +
-      "🔗 https://forms.google.com/seu-formulario-aqui\n\n" +
+      "🔗 https://qyrz011h.forms.app/briefing\n\n" +
       "✅ Preencha todas as informações solicitadas\n" +
       "📤 Após ter preenchido e enviado, digite *finalizar* para encaminhar a solicitação para o nosso time de desenvolvedores\n\n" +
       "Assim que você confirmar, um de nossos especialistas entrará em contato em até 30 minutos para apresentar sua proposta personalizada! 🚀\n\n" +
