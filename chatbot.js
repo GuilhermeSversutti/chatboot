@@ -16,7 +16,15 @@ const PORT = process.env.PORT || 3000;
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--headless=new"],
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--headless=new",
+      "--disable-gpu",
+      "--disable-dev-shm-usage",
+      "--disable-software-rasterizer",
+      "--window-size=1920,1080",
+    ],
     executablePath:
       "/home/ubuntu/.cache/puppeteer/chrome/linux-137.0.7151.70/chrome-linux64/chrome",
   },
