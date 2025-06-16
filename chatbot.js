@@ -7,6 +7,12 @@ const {
   LocalAuth,
 } = require("whatsapp-web.js");
 const puppeteer = require("puppeteer");
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const app = express();
+const PORT = process.env.PORT || 3000;
+
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
@@ -16,7 +22,10 @@ const client = new Client({
 });
 
 client.on("qr", (qr) => {
-  qrcode.generate(qr, { small: true });
+  // Salva o QR code em um arquivo
+  const qrPath = path.join(__dirname, "whatsapp-qr.txt");
+  fs.writeFileSync(qrPath, qr);
+  console.log("QR Code salvo em:", qrPath);
 });
 
 client.on("ready", () => {
@@ -446,3 +455,11 @@ async function encaminharParaEspecialista(msg) {
       "Enquanto isso, que tal conhecer nossos planos? Digite *2* para ver as opções disponíveis!"
   );
 }
+
+app.get("/", (req, res) => {
+  res.send("Bot de WhatsApp rodando!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor web rodando na porta ${PORT}`);
+});
