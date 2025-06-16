@@ -30,6 +30,7 @@ const client = new Client({
       "--disable-dev-shm-usage",
       "--disable-software-rasterizer",
       "--window-size=1920,1080",
+      "--mute-audio",
     ],
     executablePath:
       "/home/ubuntu/.cache/puppeteer/chrome/linux-137.0.7151.70/chrome-linux64/chrome",
